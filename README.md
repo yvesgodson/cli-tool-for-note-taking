@@ -33,8 +33,6 @@ Cette commande crée ou met à jour l'environnement virtuel `.venv` à partir de
 uv run python -m daily_tasks.app
 ```
 
-La forme `python -m daily_tasks.app` est importante : elle lance `app.py` comme le module `daily_tasks.app`, ce qui permet aux imports comme `from daily_tasks.task import Tasks` de fonctionner.
-
 ## Structure du projet
 
 ```text
@@ -52,7 +50,7 @@ cli_tool/
 
 ## Format des données
 
-Chaque tâche est enregistrée sous cette forme dans `tasks.json` :
+Chaque tâche est enregistrée dans `tasks.json` :
 
 ```json
 {
@@ -65,4 +63,5 @@ Chaque tâche est enregistrée sous cette forme dans `tasks.json` :
 
 ## Prochaine étape
 
-Remplacer les appels de test placés à la fin de `app.py` par un menu qui permet à l'utilisateur de choisir une action : ajouter, lister, afficher, terminer ou supprimer une tâche.
+- rich + argparse pour l'interface CLI
+- ajouter les fonctions dans `app.py` dans TaskManager
