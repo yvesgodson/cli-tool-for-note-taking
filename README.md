@@ -4,11 +4,7 @@ Léger gestionnaire de taches journalières
 
 ## Fonctionnalités en cours
 
-1. Créer une tâche avec un identifiant, un titre, un statut et une date de création.
-2. Enregistrer et charger les tâches depuis `daily_tasks/datas/tasks.json`.
-3. Afficher une tâche à partir de son identifiant.
-4. Marquer une tâche comme terminée.
-5. Supprimer une tâche.
+1. Interface cli avec argparse + rich
 
 > Le projet est en cours d'apprentissage et de développement. Le menu interactif et certains affichages restent à finaliser.
 
@@ -64,4 +60,4 @@ Chaque tâche est enregistrée dans `tasks.json` :
 ## Prochaine étape
 
 - rich + argparse pour l'interface CLI
-- ajouter les fonctions dans `app.py` dans TaskManager
+

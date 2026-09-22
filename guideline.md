@@ -251,19 +251,7 @@ Your first version is complete when:
 - The program is split into understandable responsibilities.
 - You can explain what each class does without reading the code.
 
-## Avoid these features initially
 
-Do not add these until the basic version is reliable:
-
-- Databases
-- User accounts
-- Web interfaces
-- AI
-- Due dates
-- Recurring tasks
-- Categories
-- Synchronization
-- Complex configuration files
 
 They are not bad ideas. They simply increase the number of problems before you understand the first one.
 
@@ -279,4 +267,4 @@ After each stage, answer these questions yourself:
 6. What would break if two tasks had the same ID?
 7. How would you change the design if you later replaced JSON with SQLite?
 
-A strong next step is to write the `Task` class and the four commands in plain English before coding them. Then implement only Stage 1 and test it manually.
+
