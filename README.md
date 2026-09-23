@@ -21,13 +21,35 @@ Depuis la racine du projet :
 uv sync
 ```
 
-Cette commande crée ou met à jour l'environnement virtuel `.venv` à partir de `pyproject.toml` et `uv.lock`.
-
 ## Lancer l'application
 
 ```powershell
 uv run python -m daily_tasks.app
 ```
+
+## Liste des fonctions
+
+- ajouter une tache : 
+```python
+uv run python -m daily_tasks.app add "my task"
+```
+- lister les taches :
+```python
+uv run python -m daily_tasks.app list_tasks()
+```
+- supprimer une tache :
+```python
+uv run python -m daily_tasks.app del [id]
+```
+- marquer comme complétée :
+```python
+uv run python -m daily_tasks.app done [id]
+```
+- afficher une tache :
+```python
+uv run python -m daily_tasks.app display [id]
+```
+
 
 ## Structure du projet
 
@@ -59,5 +81,7 @@ Chaque tâche est enregistrée dans `tasks.json` :
 
 ## Prochaine étape
 
-- rich + argparse pour l'interface CLI
+- rich + pour l'interface CLI
+- régulariser pour pouvoir lancer l'application
+
 

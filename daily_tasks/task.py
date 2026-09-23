@@ -51,17 +51,18 @@ class TaskManager:
                 return title_input
             print("La tache ne peut pas être vide")
     # add a task
-    def add_task(self):
+    def add_task(self, title = None):
         tasks = self.storage.load_tasks()
         next_id = 1 if not tasks else max(t["id"] for t in tasks) + 1
         now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+        final_title = title if title is not None else self.input_task()
+
         new_task = Tasks(
             id=next_id,
-            title=self.input_task(),          
+            title=final_title,      
             completed=False,
-            created_at=now,
-        )
+            created_at=now,)
         new_task_dict = new_task.to_dict()
 
         print("#" * 30)
@@ -127,12 +128,11 @@ class TaskManager:
         if task_to_display is None :
             print(f"La tache d'id {id} n'existe pas")
             return
-        print("#" * 30)
-        print("\n")
-        print(f"Numéro de tache : {task_to_display["id"]}\n")
-        print(f"Tache : {task_to_display["title"]}\n")
-        print(f"Complétée : {task_to_display["completed"]}\n")
-        print(f"Créée à : {task_to_display["created_at"]}\n")
+        print("#" * 30 )
+        print(f"\nNuméro de tache : {task_to_display['id']}\n")
+        print(f"Tache : {task_to_display['title']}\n")
+        print(f"Complétée : {task_to_display['completed']}\n")
+        print(f"Créée à : {task_to_display['created_at']}\n")
         print("#" * 30)
 
 
