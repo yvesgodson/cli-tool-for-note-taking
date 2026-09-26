@@ -2,13 +2,8 @@
 
 Léger gestionnaire de taches journalières
 
-## Fonctionnalités en cours
 
-1. Interface cli avec argparse + rich
-
-> Le projet est en cours d'apprentissage et de développement. Le menu interactif et certains affichages restent à finaliser.
-
-## Prérequis
+## Requirements
 
 1. Python 3.13 ou une version plus récente.
 2. [uv](https://docs.astral.sh/uv/) pour créer et gérer l'environnement du projet.
@@ -21,7 +16,39 @@ Depuis la racine du projet :
 uv sync
 ```
 
-## Lancer l'application
+## Lancer l'application en mode interactif
+
+```powershell
+uv run python -m daily_tasks.app
+```
+### Commandes
+```powershell
+# aide
+❯ help
+
+# ajouter un tache d'id [id]
+❯ add Acheter du pain
+
+# lister les taches
+❯ list
+
+# marquer une tache d'id [id] comme lue
+❯ done 1
+
+# afficher une tache spécifique d'id [id]
+❯ display 1
+
+# supprimer une tache d'id [id]
+daily-tasks ❯ del 2
+
+# effacer l'affichage
+❯ clear
+
+# quitter l'application
+❯ quit
+```
+
+## Utiliser l'application en one shot
 
 ```powershell
 uv run python -m daily_tasks.app
@@ -78,10 +105,4 @@ Chaque tâche est enregistrée dans `tasks.json` :
     "created_at": "2026-09-14 20:13:24"
 }
 ```
-
-## Prochaine étape
-
-- rich + pour l'interface CLI
-- régulariser pour pouvoir lancer l'application
-
 
